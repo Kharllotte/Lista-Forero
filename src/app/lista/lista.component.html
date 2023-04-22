@@ -1,22 +1,27 @@
 
 <div appDirectiva>
     <h1>Lista de estudiantes Coder</h1>
+
+</div>
+<br>
+<div>
+    <h5>hoy es: {{hoy | date}} </h5>
+    <h5>Son las: {{hoy | date : "shortTime"}}</h5>
 </div>
 
-
-<div *ngIf="activar">
+<div *ngIf="activar" class="list">
     <div [ngStyle]="{ color: color }" [ngSwitch]="valorSwitch">
         <ul>
             <li *ngFor="let persona of personas">
-                {{ persona }}
+                <h4>{{ persona }}</h4>
             </li>
         </ul>
     </div>
 </div>
 
-<button (click)="activar = true" >Activar lista</button>
-<button (click)="activar = false">Desactivar lista</button>
-
-<button (click)="seleccionarColor('red')">Rojo</button>
-<button (click)="seleccionarColor('blue')">Azul</button>
-<button (click)="seleccionarColor('black')">Negro</button>
+<button (click)="activar = true" class="btn btn-success">Activar lista</button>
+<button (click)="activar = false" class="btn btn-danger">Desactivar lista</button>
+<br>
+<button (click)="seleccionarColor('red')" class="btn btn-outline-danger">Rojo</button>
+<button (click)="seleccionarColor('blue')" class="btn btn-outline-primary">Azul</button>
+<button (click)="seleccionarColor('black')" class="btn btn-outline-dark">Negro</button>

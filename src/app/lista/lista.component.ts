@@ -11,6 +11,7 @@ export class ListaComponent implements OnInit{
   public activar = true;
   public valorSwitch: string | undefined;
   public color: string | undefined;
+  public hoy = new Date();
 
   seleccionarColor(color: string) {
     this.color = color; 
