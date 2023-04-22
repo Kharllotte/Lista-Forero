@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { ListaComponent } from './lista/lista.component';
+import { DirectivaDirective } from './directiva.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListaComponent
+    ListaComponent,
+    DirectivaDirective
   ],
   imports: [
     BrowserModule

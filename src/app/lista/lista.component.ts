@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaComponent implements OnInit{
   public nombre : string | undefined;
-  public personas= ["Liliana", "Daniela"];
+  public personas= ["Liliana", "Daniela", "Carlos", "David", "Juan"];
 
   ngOnInit(): void {
     
