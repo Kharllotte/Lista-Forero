@@ -3,8 +3,20 @@
     <h1>Lista de estudiantes Coder</h1>
 </div>
 
-<ul>
-    <li *ngFor="let persona of personas">
-        {{ persona }}
-    </li>
-</ul>
+
+<div *ngIf="activar">
+    <div [ngStyle]="{ color: color }" [ngSwitch]="valorSwitch">
+        <ul>
+            <li *ngFor="let persona of personas">
+                {{ persona }}
+            </li>
+        </ul>
+    </div>
+</div>
+
+<button (click)="activar = true" >Activar lista</button>
+<button (click)="activar = false">Desactivar lista</button>
+
+<button (click)="seleccionarColor('red')">Rojo</button>
+<button (click)="seleccionarColor('blue')">Azul</button>
+<button (click)="seleccionarColor('black')">Negro</button>
